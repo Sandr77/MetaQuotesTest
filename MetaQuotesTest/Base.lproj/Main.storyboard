@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MetaQuotesTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leB-IL-kZd">
+                                <rect key="frame" x="0.0" y="210" width="375" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Trq-V8-kip"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YoN-oR-vwC"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter URL here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tH2-vJ-Bq2">
+                                <rect key="frame" x="20" y="40" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SZi-KJ-MOd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter Regex here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewa-0f-2f8">
+                                <rect key="frame" x="20" y="100" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LUg-vD-dkI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXO-7M-civ">
+                                <rect key="frame" x="164" y="160" width="47" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startStopPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZm-Ic-eCT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ewa-0f-2f8" firstAttribute="top" secondItem="tH2-vJ-Bq2" secondAttribute="bottom" constant="20" id="5Z6-b8-r0U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ewa-0f-2f8" secondAttribute="trailing" constant="20" id="5c3-ak-wGs"/>
+                            <constraint firstItem="leB-IL-kZd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JM8-0I-vi5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="leB-IL-kZd" secondAttribute="trailing" id="LnM-Sd-POX"/>
+                            <constraint firstItem="CXO-7M-civ" firstAttribute="top" secondItem="Ewa-0f-2f8" secondAttribute="bottom" constant="20" id="SEe-0S-2SH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="leB-IL-kZd" secondAttribute="bottom" id="aVG-L7-wbH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tH2-vJ-Bq2" secondAttribute="trailing" constant="20" id="cUJ-Cq-VgW"/>
+                            <constraint firstItem="tH2-vJ-Bq2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eUU-33-9ac"/>
+                            <constraint firstItem="leB-IL-kZd" firstAttribute="top" secondItem="CXO-7M-civ" secondAttribute="bottom" constant="20" id="gUj-ea-olN"/>
+                            <constraint firstItem="Ewa-0f-2f8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mmi-8q-u3e"/>
+                            <constraint firstItem="CXO-7M-civ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pid-Cm-3Xs"/>
+                            <constraint firstItem="tH2-vJ-Bq2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ysB-OO-dSS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="regexTextField" destination="Ewa-0f-2f8" id="tax-Bk-FJ2"/>
+                        <outlet property="startStopButton" destination="CXO-7M-civ" id="h8k-o7-Bjn"/>
+                        <outlet property="tableView" destination="leB-IL-kZd" id="Ye1-d0-PVr"/>
+                        <outlet property="urlTextField" destination="tH2-vJ-Bq2" id="dWy-4o-iem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
